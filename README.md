@@ -1,50 +1,34 @@
 # Practice: Basic Class Syntax
 
-In this exercise, you will be creating a class by creating a constructor and
-defining static and instance methods.
+This project is a part of the App Academy Open curriculum, where I learned about JavaScript classes and their usage. The goal of this project is to create a `Person` class with instance variables, instance methods, and static methods.
 
-## Set up
+## Person Class
 
-Clone the starter from the **Download** link at the bottom of this page.
+The `Person` class has the following features:
 
-Run ```npm install``` to install any dependencies.
+- **Instance Variables:**
+  - `firstName`: First name of the person.
+  - `lastName`: Last name of the person.
+  - `age`: Age of the person.
 
-## Directions
+- **Instance Method:**
+  - `introduce()`: This method introduces the person by logging a string to the console, such as "Hi, I'm [firstName] [lastName], and I'm [age] years old."
 
-Implement the following in the __classes/person.js__ file.
+- **Static Method:**
+  - `introducePeople(people)`: This static method takes an array of `Person` instances as an argument. It checks if the input is a valid array and if all items in the array are instances of the `Person` class. If everything is valid, it calls the `introduce()` method on each person in the array.
 
-Create a class `Person` that has the following:
+## Usage
 
-1. instance variables that include `firstName`, `lastName`, and `age`
-2. an instance method called `introduce` that will introduce the person by using
-   `console.log` with a string saying, "Hi, I'm `<firstName>` `<lastName>`, and
-   I'm `<age>` years old.".
-3. a static method called `introducePeople` that will take in an array of
-   `Person` instances. 
-   
-   Have `introducePeople` throw an Error with a message of
-   "introducePeople only takes an array as an argument." if the argument is not
-   of type `Array`.
-   
-   Have `introducePeople` throw an Error with a message of
-   "All items in array must be Person class instances." if any of the items in
-   the array are not instances of the `Person` class.
-   
-   If no Errors are thrown then `introducePeople` should call `introduce` on 
-   each of the `People` instances in the input array.
+To use this project, you can follow these steps:
 
->Tip: We'll dive into `Errors` in more detail later. For now, just know that
- an `Error` is also a `Class`, and when you throw a new error the
- first argument will be that error's message. 
- Use MDN's [Error Examples][errExp] and [Error Constructor][errCon] 
- to help you out if you're stuck.
- 
-Run the test specs in the __test/person-spec.js__ file to test that you
-have created the `Person` class correctly:
+1. Clone the repository to your local machine.
+2. Navigate to the `classes/person.js` file to view the implementation of the `Person` class.
+3. Feel free to create instances of the `Person` class and utilize the provided methods.
 
-```shell
-npm test
-```
+## Acknowledgments
 
-[errExp]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#examples
-[errCon]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error
+This project was completed as a part of the App Academy Open curriculum. Special thanks to the instructors and the App Academy team for providing valuable resources and guidance.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
